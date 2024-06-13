@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar :logo="logo_src" :alt="app_name" />
+    <Navbar :alt="app_name" />
     <div>
       <router-view></router-view>
     </div>
@@ -19,8 +19,8 @@ export default {
   },
   data: function () {
     return {
-      logo_src: "/public/img/image copy.png",
-      app_name: "catsAPI",
+      logo_src: "/public/img/image.png",
+      app_name: "catsAPI"
     };
   },
 };

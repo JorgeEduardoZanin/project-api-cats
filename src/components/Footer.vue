@@ -16,7 +16,7 @@ export default {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 150px;
+    height: 100px;
     background-color: #333;
     border-top: 3px solid #000;
     display: flex;

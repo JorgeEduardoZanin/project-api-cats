@@ -1,8 +1,9 @@
 <template>
     <nav id="barra-navegacao">
+        <h3>CATS API</h3>
         <div id="image">
             <router-link id="logo-url" to="/">
-                <img id="logo" :src="logo" :alt="alt">
+                <img id="logo" src="../assets/img/image copy.png" :alt="alt">
             </router-link>
         </div>
         <div id="links">  
@@ -17,7 +18,7 @@
 <script>
     export default{
         name:"NavbarSite",
-        props:["logo","alt"]
+        props:["alt"]
     }
 
 </script>
@@ -30,8 +31,8 @@
 
 #barra-navegacao{
     width: 100%;
-    background-color: #333;
-    height: 80px;
+    background-color: #444;
+    height: 60px;
     border-bottom: 3px solid #000;
     display: flex;
     justify-content: center;
@@ -54,9 +55,18 @@
 }
 
 
-img{
-    height: 30px;
-    width: 30px;
+#logo{
+    height: 45px;
+    width: 45px;
+    margin: auto;
+    margin-left: 10px;
+    border-radius: 10px;
 }
 
+#barra-navegacao h3{
+    text-align: center;
+    position: absolute;
+    color: #fff;
+
+}
 </style>
