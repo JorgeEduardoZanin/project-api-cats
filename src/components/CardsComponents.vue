@@ -1,58 +1,79 @@
-<template> 
-    <button @click="addFavoriteAction(cat)">Adicionar aos favoritos</button>
-    <div class="cardComponent">
-        <img :src="cat.url" />
-        <div class="card-body">
+<template>
+    <div>
+        <div class="cardContainer">
+            <div class="cardComponent">
+                <img :src="cat.url" />
+            </div>
+        </div>
+        <div>
+            <button @click="addFavoriteAction(cat)">Adicionar aos favoritos</button>
+            <div class="catInfo">
+                <p>Tipo: {{ catType }}</p>
+                <p>Gênero: {{ catGender }}</p>
+            </div>
         </div>
     </div>
 </template>
 
-<script> 
-import { mapActions } from 'vuex'; 
+
+<script>
+import { mapActions } from 'vuex';
+import { faker } from '@faker-js/faker';
 
 export default {
-    name: "CardsComponents", 
+    name: "CardsComponents",
     props: {
         cat: {
             type: Object,
             required: true,
         },
     },
+    data() {
+        return {
+            catType: faker.animal.cat(), 
+            catGender: Math.random() > 0.5 ? 'male' : 'female', 
+        };
+    },
     methods: {
         ...mapActions(['addFavoriteAction'])
     }
 };
-
 </script>
 
 <style>
 
 .cardComponent {
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 6px;
     overflow: hidden;
-    margin: 10px;
-    flex: 1 1 calc(33.333% - 20px);
-    box-sizing: border-box; 
+    margin: 20px;
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.cardImg {
-    width: 100%;
-    height: auto;
+img {
+    width: 290px;
+    height: 290px;
+    border-radius: 6px;
 }
 
-.card-body {
-    padding: 15px;
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 2em;
+    color: #ccc;
+    transition: color 0.3s ease;
 }
 
-    button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        font-size: 2em;
-        color: #ccc;
-        transition: color 0.3s ease;
-    }
+.catInfo {
+    font-family: Georgia; 
+    color: #371f1a
+}
 
 </style>

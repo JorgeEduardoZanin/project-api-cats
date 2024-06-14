@@ -17,10 +17,11 @@ export default createStore({
     actions: {
         addFavoriteAction(context, newFavorite) {
             if(this.state.favorites.find(item => item.id === newFavorite.id)) {
-                alert ('Gato ja adicionado aos Favoritos!')
+                alert ('Esse gatinho ja foi adicionado aos favoritos!')
             }
             else {
                 context.commit("addFavorite", newFavorite)
+                alert ('Novo gatinho adicionado aos favoritos! (=^･ω･^=)')
             }
         },
     },

@@ -1,8 +1,8 @@
 <template>
     <div>
         <h1>Seus Gatos Favoritos</h1>
-        <div class="card">
-            <cardComponent v-for="favorite in getFavorites" :key="favorite.id" :cats="favorite" />
+        <div class="card" v-if="getFavorites.length > 0">
+            <CardsComponents v-for="favorite in getFavorites" :key="favorite.id" :cat="favorite" />
             
         </div>
     </div>
@@ -10,12 +10,12 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import cardComponent from '@/components/CardsComponents.vue';
+import CardsComponents from '@/components/CardsComponents.vue';
 
 export default {
     name: "FavoritesView",
     components: {
-        cardComponent
+        CardsComponents
     }, 
     computed: {
         ...mapGetters(['getFavorites'])
@@ -27,3 +27,7 @@ export default {
 
 </script>
 
+<style>
+
+
+</style>
