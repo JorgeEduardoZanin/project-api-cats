@@ -7,6 +7,7 @@
 
 <script>
 
+
 import SectionRandomCat from '@/components/SectionRandomCat.vue'
 
 
@@ -19,3 +20,11 @@ export default {
 
 </script>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> 2b678c7 (arrumei umas coisa)

@@ -7,7 +7,11 @@
             </router-link>
         </div>
         <div id="links">  
+<<<<<<< HEAD
             <router-link class="link" to="/">Home</router-link>
+=======
+            <router-link class="link" to="/">Home</router-link> 
+>>>>>>> 2b678c7 (arrumei umas coisa)
             <router-link class="link" to="/cats">Cats</router-link>
             <router-link class="link" to="/favorites">Favorites</router-link>
         </div>
@@ -66,8 +70,19 @@
 
 #barra-navegacao h3{
     text-align: center;
+    margin-bottom: 20px;
     position: absolute;
     color: #fff;
 
+}
+
+h3{
+    margin-top: 20px
+}
+
+
+a:hover{
+    color: #d4d4d4;
+    transition: .5s;
 }
 </style>

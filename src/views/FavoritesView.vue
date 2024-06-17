@@ -4,6 +4,8 @@
       <div class="cards-wrapper">
         <CardsComponents :cats="getFavorites" />
       </div>
+
+      <div style="height: 451px;"></div>
     </div>
   </template>
   
@@ -27,6 +29,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    color:#333;
   }
   </style>
   
