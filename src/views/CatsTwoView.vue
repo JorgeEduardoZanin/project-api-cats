@@ -1,10 +1,6 @@
 <template>
-<<<<<<< HEAD
   <div class="cats">
     <h1 class="titulo">Escolha seus gatos favoritos!</h1>
-=======
-  <div class="about">
->>>>>>> 2b678c7 (arrumei umas coisa)
     <div class="cards-container">
       <CardsComponents :cats="cats" />
     </div>
@@ -21,15 +17,11 @@ import { getCats } from "../services/HttpService.js";
 import CardsComponents from "../components/CardsComponents.vue";
 
 export default {
-<<<<<<< HEAD
 <<<<<<<< HEAD:src/views/CatsView.vue
   name: "CatsView",
 ========
   name: "CatsOneView",
 >>>>>>>> 2b678c7 (arrumei umas coisa):src/views/CatsTwoView.vue
-=======
-  name: "CatsOneView",
->>>>>>> 2b678c7 (arrumei umas coisa)
   data() {
     return {
       cats: [],
@@ -61,15 +53,12 @@ export default {
   justify-content: space-around;
 }
 
-<<<<<<< HEAD
 <<<<<<<< HEAD:src/views/CatsView.vue
 .titulo {
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 27px;
 ========
-=======
->>>>>>> 2b678c7 (arrumei umas coisa)
 .paginacao-button{
   
   height: 30px;
@@ -92,12 +81,7 @@ export default {
   margin-top: 30px;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
 >>>>>>>> 2b678c7 (arrumei umas coisa):src/views/CatsTwoView.vue
 }
 </style>
 
-=======
-}
-</style>
->>>>>>> 2b678c7 (arrumei umas coisa)

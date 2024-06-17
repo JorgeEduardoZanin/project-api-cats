@@ -44,7 +44,6 @@ h1 {
 }
 
 button {
-  position: absolute;
   top: 450px;
   background-color: #fff;
   padding: 10px;
@@ -79,6 +78,8 @@ div img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 565px;
  
 }
 
@@ -91,8 +92,16 @@ div img {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background-color: #fff;
+<<<<<<< HEAD
   margin: 10px;
   margin-top: 50px;
 } 
 
+=======
+  margin-top: 30px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+ 
+  } 
+>>>>>>> 2b678c7 (arrumei umas coisa)
 </style>

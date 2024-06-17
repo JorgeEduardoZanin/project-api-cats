@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <Navbar :alt="app_name" />
     <div>
       <router-view></router-view>
@@ -31,4 +31,6 @@ export default {
   margin: 0;
   padding: 0;
 }
+
+
 </style>
