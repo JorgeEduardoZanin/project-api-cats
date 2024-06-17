@@ -6,7 +6,7 @@
       </div>
       <div class="card-content">
         <div class="cat-info">
-          <p class="cat-type">{{ catType }}</p>
+          <p class="cat-type">{{ cat?.breeds[0].name }}</p>
           <div class="favorite-actions">
             <button v-if="isFavorite(cat)" @click="removeFavoriteAction(cat)" class="favorite-button remove-favorite">
               <i class="fas fa-heart"></i>
@@ -25,7 +25,6 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import { faker } from "@faker-js/faker";
 
 export default {
   name: "CardsComponents",
@@ -34,11 +33,6 @@ export default {
       type: Array,
       required: true,
     },
-  },
-  data() {
-    return {
-      catType: faker.animal.cat(),
-    };
   },
   methods: {
     ...mapActions(["addFavoriteAction", "removeFavoriteAction"]),
