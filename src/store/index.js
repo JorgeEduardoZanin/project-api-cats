@@ -17,7 +17,7 @@ export default createStore({
         },
         removeFromFavorites(state, cat) {
             state.favorites = state.favorites.filter(favorite => favorite.id !== cat.id);
-          },
+        },
     },
     actions: {
         addFavoriteAction(context, newFavorite) {
@@ -31,7 +31,7 @@ export default createStore({
         },
         removeFavoriteAction({ commit }, cat) {
             commit('removeFromFavorites', cat);
-          },
+        },
     },
     modules: {},
     plugins: [createPersistedState()],

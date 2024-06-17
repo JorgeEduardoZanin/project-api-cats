@@ -6,7 +6,7 @@
       </div>
       <div class="card-content">
         <div class="cat-info">
-          <p class="cat-type">{{ cat?.breeds[0].name }}</p>
+          <p class="cat-type">{{ cat?.breeds[0]?.name }}</p>
           <div class="favorite-actions">
             <button v-if="isFavorite(cat)" @click="removeFavoriteAction(cat)" class="favorite-button remove-favorite">
               <i class="fas fa-heart"></i>
@@ -46,7 +46,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .cards-wrapper {
   display: flex;
   flex-wrap: wrap;

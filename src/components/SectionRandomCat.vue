@@ -37,7 +37,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 h1 {
   font-size: 20px;
   margin-top: 10px;
@@ -69,8 +69,10 @@ div img {
 
 #img-cat {
   width: 100%;
-  border-bottom: 2px solid #fff;
-  border-radius: 10px;
+  border-bottom: 0px solid #fff;
+  border-radius: 8px;
+  align-items: center;
+  margin-top: 50px;
 }
 
 #section {
@@ -82,10 +84,15 @@ div img {
 
 
 #cards{
-  height: 250px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   background-color: #fff;
-  margin-top: 30px;
-  border: 2px solid #fff;
-  border-radius: 10px;
+  margin: 10px;
+  margin-top: 50px;
 } 
+
 </style>
