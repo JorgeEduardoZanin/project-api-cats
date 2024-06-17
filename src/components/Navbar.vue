@@ -7,8 +7,9 @@
             </router-link>
         </div>
         <div id="links">  
-            <router-link class="link" to="/">Home</router-link> |
-            <router-link class="link" to="/about">About</router-link>
+            <router-link class="link" to="/">Home</router-link>
+            <router-link class="link" to="/cats">Cats</router-link>
+            <router-link class="link" to="/favorites">Favorites</router-link>
         </div>
     </nav>
 
