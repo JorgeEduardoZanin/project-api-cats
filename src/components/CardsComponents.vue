@@ -7,16 +7,17 @@
       <div class="card-content">
         <div class="cat-info">
           <p class="cat-type">{{ catType }}</p>
-          <button v-if="isFavorite(cat)" @click="removeFavoriteAction(cat)" class="favorite-button remove-favorite">
-            <i class="fas fa-heart"></i>
-            <span class="tooltip-text">Remover dos favoritos</span>
-          </button>
-          <button v-else @click="addFavoriteAction(cat)" class="favorite-button add-favorite">
-            <i class="far fa-heart"></i>
-            <span class="tooltip-text">Adicionar aos favoritos</span>
-          </button>
+          <div class="favorite-actions">
+            <button v-if="isFavorite(cat)" @click="removeFavoriteAction(cat)" class="favorite-button remove-favorite">
+              <i class="fas fa-heart"></i>
+              <span class="tooltip-text">Remover dos favoritos</span>
+            </button>
+            <button v-else @click="addFavoriteAction(cat)" class="favorite-button add-favorite">
+              <i class="far fa-heart"></i>
+              <span class="tooltip-text">Adicionar aos favoritos</span>
+            </button>
+          </div>
         </div>
-        <p class="cat-gender">Gênero: {{ cat.gender }}</p>
       </div>
     </div>
   </div>
@@ -51,7 +52,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .cards-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -68,7 +69,7 @@ export default {
   overflow: hidden;
   background-color: #fff;
   margin: 10px;
-  width: calc(33.33% - 20px); /* Ajuste para caber 3 por linha com margem */
+  width: calc(30% - 20px); 
   box-sizing: border-box;
 }
 
@@ -79,7 +80,7 @@ export default {
 
 .cat-image {
   width: 100%;
-  height: 200px; /* Altura fixa para as imagens */
+  height: 280px;
   object-fit: cover;
   transition: transform 0.3s;
 }
@@ -89,8 +90,25 @@ export default {
 }
 
 .card-content {
-  padding: 20px;
+  padding: 20px; 
   text-align: center;
+}
+
+.cat-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.cat-type {
+  margin: 0; 
+}
+
+.favorite-actions {
+  margin-left: 20px; 
+  display: flex;
+  align-items: center;
 }
 
 .favorite-button {
@@ -100,11 +118,12 @@ export default {
   position: relative;
   font-size: 24px;
   transition: color 0.3s;
-  padding: 0; /* Remover padding para ajustar ao texto */
+  padding: 0;
+  margin-top: 1px;
 }
 
 .favorite-button:hover {
-  color: #ff4500; /* Cor do ícone vermelho ao passar o mouse */
+  color: #cf1f00e8;
 }
 
 .favorite-button .fas,
@@ -114,20 +133,20 @@ export default {
 
 .favorite-button .tooltip-text {
   visibility: hidden;
-  width: 140px; /* Tamanho do tooltip */
+  width: 140px;
   background-color: #555;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 5px 10px; 
   position: absolute;
   z-index: 1;
-  bottom: 110%; /* Ajusta a posição vertical */
+  bottom: 120%; 
   left: 50%;
-  margin-left: -70px; /* Ajusta a posição horizontal */
+  transform: translateX(-50%); 
   opacity: 0;
   transition: opacity 0.3s;
-  font-size: 14px; /* Tamanho da fonte do tooltip */
+  font-size: 14px;
 }
 
 .favorite-button .tooltip-text::after {
@@ -146,26 +165,30 @@ export default {
   opacity: 1;
 }
 
-.cat-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.cat-info .cat-type {
-  flex: 1; /* Ocupa todo o espaço possível */
-  text-align: left; /* Alinha o texto à esquerda */
-  margin-right: 10px; /* Espaçamento entre o texto e o botão */
-}
-
-.favorite-button {
-  margin-left: auto; /* Alinha o botão à direita */
-}
-
 .cat-info p {
   margin: 0;
   color: #333;
   font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .card-container {
+    width: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    width: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
 }
 </style>
