@@ -8,7 +8,7 @@ const HttpService = axios.create({
 });
 
 export const getCats = async () => {
-  return await HttpService.get('images/search?limit=10');
+  return await HttpService.get('images/search?limit=110');
 }
 
 export const getCat = async () => {

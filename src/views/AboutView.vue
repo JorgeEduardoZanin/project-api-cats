@@ -1,14 +1,14 @@
 <template>
   <div class="about">
-    <div v-for="cat in cats" :key="cat.id">
-      <CardsComponents :cat="cat"/>
+    <div class="cards-container">
+      <CardsComponents :cats="cats" />
     </div>
   </div>
 </template>
 
 <script>
-import { getCats } from "../services/HttpService.js"
-import CardsComponents from "../components/CardsComponents.vue"
+import { getCats } from "../services/HttpService.js";
+import CardsComponents from "../components/CardsComponents.vue";
 
 export default {
   name: "AboutView",
@@ -18,13 +18,16 @@ export default {
     };
   },
   components: {
-    CardsComponents
+    CardsComponents,
   },
   methods: {
     async getCat() {
-      const response = await getCats()
-
-      this.cats = response.data;
+      try {
+        const response = await getCats();
+        this.cats = response.data;
+      } catch (error) {
+        console.error("Error fetching cats:", error);
+      }
     },
   },
   created() {
@@ -32,3 +35,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+</style>
