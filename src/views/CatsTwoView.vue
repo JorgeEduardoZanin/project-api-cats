@@ -17,11 +17,8 @@ import { getCats } from "../services/HttpService.js";
 import CardsComponents from "../components/CardsComponents.vue";
 
 export default {
-<<<<<<<< HEAD:src/views/CatsView.vue
-  name: "CatsView",
-========
-  name: "CatsOneView",
->>>>>>>> 2b678c7 (arrumei umas coisa):src/views/CatsTwoView.vue
+
+  name: "CatsTwoView",
   data() {
     return {
       cats: [],
@@ -53,12 +50,12 @@ export default {
   justify-content: space-around;
 }
 
-<<<<<<<< HEAD:src/views/CatsView.vue
+
 .titulo {
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 27px;
-========
+}
 .paginacao-button{
   
   height: 30px;
@@ -69,7 +66,6 @@ export default {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  
   box-shadow: 0 2px 5px #aaa;
   border-radius: 10px;
   color: #000;
@@ -81,7 +77,11 @@ export default {
   margin-top: 30px;
   align-items: center;
   justify-content: center;
->>>>>>>> 2b678c7 (arrumei umas coisa):src/views/CatsTwoView.vue
+
+}
+
+h1{
+  text-align: center;
 }
 </style>
 

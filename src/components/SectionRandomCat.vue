@@ -1,10 +1,12 @@
 <template>
   <div id="section">
-    <h1>DESCUBRA QUAL GATO VOCÊ É</h1>
+    <h1>QUAL GATO VOCÊ É?</h1>
     <div id="cards">
-      <div v-if="cat" id="img-cat">
-        <img :src="cat.url" alt="Random Cat" />
+      <div id="img-cat">
+        <img v-if="cat" :src="cat.url" alt="Random Cat" />
+        <div v-else class="placeholder">?</div>
       </div>
+      <p v-if="cat">Esse é você!!</p>
     </div>
     <button @click="fetchRandomCat">CLIQUE IMEDIATAMENTE</button>
     <p v-if="error">{{ error }}</p>
@@ -22,9 +24,7 @@ export default {
   methods: {
     async fetchRandomCat() {
       try {
-        const response = await fetch(
-          "https://api.thecatapi.com/v1/images/search"
-        );
+        const response = await fetch("https://api.thecatapi.com/v1/images/search");
         const data = await response.json();
         this.cat = data[0];
         this.error = null;
@@ -44,7 +44,6 @@ h1 {
 }
 
 button {
-  top: 450px;
   background-color: #fff;
   padding: 10px;
   box-shadow: 10px 10px 5px #333;
@@ -60,18 +59,25 @@ button:hover {
 }
 
 div img {
-  height: 220px;
-  width: 220px;
-  border-radius: 10px;
+  height: 300px;
+  width: 300px;
   background-size: cover;
+  border-bottom: 2px solid #ddd;
 }
 
 #img-cat {
-  width: 100%;
   border-bottom: 0px solid #fff;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  height: 300px;
+  width: 300px;
+}
+
+.placeholder {
+  font-size: 150px;
+  color: #ccc;
 }
 
 #section {
@@ -80,28 +86,24 @@ div img {
   align-items: center;
   justify-content: center;
   height: 565px;
- 
 }
 
-
-#cards{
+#cards {
   display: flex;
-  align-items: center;
+  margin-top: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background-color: #fff;
-<<<<<<< HEAD
-  margin: 10px;
-  margin-top: 50px;
-} 
+  height: 400px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  text-align: center;
+}
 
-=======
-  margin-top: 30px;
-  border: 2px solid #fff;
-  border-radius: 10px;
- 
-  } 
->>>>>>> 2b678c7 (arrumei umas coisa)
+#cards p {
+  margin-top: 20px;
+  font-size: 30px;
+}
 </style>

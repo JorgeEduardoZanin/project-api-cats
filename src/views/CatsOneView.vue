@@ -64,6 +64,10 @@
     color: #000;
   }
 
+  h1{
+  text-align: center;
+}
+
   #paginacao{
     display: flex;
     flex-direction: row;
@@ -71,5 +75,13 @@
     align-items: center;
     justify-content: center;
   }
+
+  #paginacao-button:hoover{
+    background-color: #999;
+    transform: .5s;
+    cursor: pointer;
+  }
+
+
   </style>
   

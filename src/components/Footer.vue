@@ -11,15 +11,9 @@ export default {
 </script>
 
 <style>
-    footer{
-<<<<<<< HEAD
-
-    bottom: 0;
-    left: 0;
-=======
+  footer{
     margin-top: 30px;
     margin-top: 50px;
->>>>>>> 2b678c7 (arrumei umas coisa)
     width: 100%;
     height: 100px;
     background-color: #333;

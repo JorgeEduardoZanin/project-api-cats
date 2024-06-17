@@ -7,11 +7,7 @@
             </router-link>
         </div>
         <div id="links">  
-<<<<<<< HEAD
-            <router-link class="link" to="/">Home</router-link>
-=======
             <router-link class="link" to="/">Home</router-link> 
->>>>>>> 2b678c7 (arrumei umas coisa)
             <router-link class="link" to="/cats">Cats</router-link>
             <router-link class="link" to="/favorites">Favorites</router-link>
         </div>
