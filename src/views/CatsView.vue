@@ -70,7 +70,7 @@ export default {
   align-items: center;
   text-decoration: none;
   
-  box-shadow: 0 2px 5px #aaa;
+  box-shadow: 0 2px 5px #3a3939;
   border-radius: 10px;
   color: #000;
 }
